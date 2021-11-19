@@ -4,6 +4,7 @@ import string
 sample= input('Enter your text file path \nPlease, remember to put slashes to the right : ')
 mytxt=open(sample, 'r').read()
 mytxt=mytxt.translate(str.maketrans('', '', string.punctuation))
+mytxt=mytxt.translate(str.maketrans('', '', '\n\t'))
 mylist=mytxt.split(' ')
 a=(map(lambda i: i.lower(), mylist))
 mylist=list(a)
